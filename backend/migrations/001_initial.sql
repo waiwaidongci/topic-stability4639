@@ -2,4 +2,7 @@
 -- editorial_notes and users/audit. Natural keys corpus.name,
 -- (corpus_id,reference), (run_id,topic_index). TopicProfile.mean_similarity
 -- uses MySQL DOUBLE; complete matrices/word weights are JSON doubles.
--- Plan production schema migrations explicitly.
+-- topic_runs.config/result are JSON, so the dedupe flag and grouped
+-- document/group results need no schema change; runs created before the
+-- flag keep their recorded per-document result untouched. Plan production
+-- schema migrations explicitly.

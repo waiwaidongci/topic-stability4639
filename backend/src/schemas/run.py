@@ -8,3 +8,4 @@ class RunInput(BaseModel):
  min_df:int=Field(ge=1,le=10,strict=True)
  max_iter:int=Field(ge=10,le=3000,strict=True)
  tolerance:float=Field(ge=1e-8,le=.01,allow_inf_nan=False)
+ dedupe:bool=True
